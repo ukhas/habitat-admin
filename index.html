@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<!-- habitat: admin -->
+<!-- http://habitat.habhub.org/admin -->
+<!-- (C) Copyright 2012; GNU GPL 3-->
+<!-- Daniel Saul -->
+
+<!-- habitat: web template -->
+<!-- http://habitat.habhub.org -->
+<!-- (C) Copyright 2012; GNU GPL 3-->
+<!-- Daniel Saul, based on Skeleton -->
+
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <title>habitat admin</title>
+    <meta name="description" content="habitat administration and approval"/>
+    <meta name="author" content="Daniel Saul"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <link rel="stylesheet" type="text/css" href="t/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="t/css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="t/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="t/images/favicon.ico" />
+
+    <link rel="stylesheet" href="css/redmond/jquery-ui-1.8.21.custom.css" />
+
+    <script type="text/coffeescript" src="coffee/admin.coffee"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.couch.js"></script>
+    <script type="text/javascript" src="js/jsrender.js"></script>
+    <script type="text/javascript" src="js/coffee-script.js"></script>
+</head>
+<body class="login">
+
+<span id="loginpage">
+    <header class="add-bottom">
+        <div class="container">
+            <div class="sixteen columns">
+                <h1 class="no-margin">
+                    <a href="http://habitat.habhub.org/" alt="habitat">
+                        <img src="t/images/header_logo.png" alt="habitat" title="habitat"/>
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sixteen columns">
+            <center>
+                <input type="text" id="login_user" placeholder="username" />
+                <input type="password" id="login_password" placeholder="password" />
+                <button id="login_submit" style="padding-left: 30px; padding-right: 30px;">Login</button>
+            </center>
+        </div>
+    </div>
+</span>
+
+   <!--
+    <header>
+        <div class="container">
+            <div class="sixteen columns">
+                <h1 class="no-margin">
+                    <a href="http://habitat.habhub.org/" alt="habitat">
+                        <img src="t/images/header_logo.png" alt="habitat" title="habitat"/>
+                    </a>
+                </h1>
+                <span id="app_name"><b>administration</b></span>
+            </div>
+        </div>
+        </header>
+
+ 
+    <div id="grey-section">
+        <div class="container">
+            <div class="two-thirds column">
+                <h3 class="remove-bottom" id="page_title">export payload telemetry</h3>
+                <p class="remove-bottom" id="page_subtitle"></p>
+            </div>
+        </div>
+    </div>
+    -->
+
+
+</body>
+</html>
+
