@@ -5,13 +5,13 @@ http://habitat.habhub.org/admin
 Daniel Saul
 ###
 
-db = $.couch.db "habitat"
+db = $.couch.db "habitat";
 
 logged_in = ->
-    $.couch.session {
+    $.couch.login {
         include_docs: true,
         success: (data) ->
             console.log data
     }
 
-logged_in()
+logged_in();
