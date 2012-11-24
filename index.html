@@ -61,8 +61,9 @@
     <div class="container">
         <div class="sixteen columns">
             <center>
-                <input type="text" id="login_user" placeholder="username" />
-                <input type="password" id="login_password" placeholder="password" />
+                <div class="error"><b>Error:</b> <span id="login_error">Incorrect username or password.</span></div>
+                <input type="text" id="login_user" name="username" placeholder="username" />
+                <input type="password" id="login_password" name="password" placeholder="password" />
                 <button id="login_submit" style="padding-left: 30px; padding-right: 30px;">Login</button>
             </center>
         </div>
