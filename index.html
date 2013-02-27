@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="t/css/skeleton.css" />
     <link rel="stylesheet" type="text/css" href="t/css/layout.css" />
     <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
 
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -34,8 +35,8 @@
     <link rel="shortcut icon" href="t/images/favicon.ico" />
 
     <link rel="stylesheet" href="css/redmond/jquery-ui-1.8.21.custom.css" />
+    <script type="text/coffeescript" src="coffee/login.coffee"></script>
 
-    <script type="text/coffeescript" src="coffee/admin.coffee"></script>
     <script type="text/javascript" src="js/json2.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
@@ -70,7 +71,8 @@
     </div>
 </span>
 
-   <!--
+<span id="adminpage">
+
     <header>
         <div class="container">
             <div class="sixteen columns">
@@ -79,23 +81,41 @@
                         <img src="t/images/header_logo.png" alt="habitat" title="habitat"/>
                     </a>
                 </h1>
-                <span id="app_name"><b>administration</b></span>
+                <span id="app_name"><b>welcome, <span id="header_username">admin</span></b> &nbsp; <a href="#" id="logout_link">logout</a></span>
             </div>
         </div>
         </header>
 
- 
     <div id="grey-section">
         <div class="container">
-            <div class="two-thirds column">
-                <h3 class="remove-bottom" id="page_title">export payload telemetry</h3>
+            <div class="ten columns">
+                <h3 class="remove-bottom" id="page_title">flight approval</h3>
                 <p class="remove-bottom" id="page_subtitle"></p>
             </div>
+
+            <div class="six columns remove-bottom">
+                <input type="text" id="search" placeholder="Search docs..." />
+            </div>
+
         </div>
     </div>
-    -->
 
+    <div id="sections">
 
+        <section id="approval_list" class="container">
+            <div id="approval_list_table" class="sixteen columns">
+
+            </div>
+            
+            <div style="display: none;" id="approval_list_nav" class="sixteen columns offset-by-ten">
+                <button class="three columns" id="list_prev">Prev Page</button>
+                <button class="three columns" id="list_next">Next Page</button>
+            </div>
+
+        </section>
+
+    </div>
+</span>
 </body>
 </html>
 
