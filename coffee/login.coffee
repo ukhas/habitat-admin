@@ -36,7 +36,7 @@ logged_in = (role) ->
     $.couch.session
         success: (data) ->
             return showLoginPage() if not data["userCtx"]["name"]?
-            return display_login_error("You must login as a #{role}.") if (jQuery.inArray role, data["userCtx"]["roles"]) == -1
+            #return display_login_error("You must login as a #{role}.") if (jQuery.inArray role, data["userCtx"]["roles"]) == -1
             hideLoginPage(data["userCtx"]["name"])
 
 showLoginPage = ->
@@ -159,7 +159,7 @@ display_approval_list = (resp) ->
             i++
             r = "
                 <div class='row approval_list_item' id='#{row.id}'>
-                    <div class='one column alpha expand_item'><a id='#{row.id}-click' href='##{row.id}'>+</a></div>
+                    <div class='one column alpha expand_item'><a id='#{row.id}-click' href='#' >+</a></div>
                     <div class='seven columns'>
                         <div><strong>#{row.doc.name}</strong></div>
                         <div><small>#{row.id}</small></div>
