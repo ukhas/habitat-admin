@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+
+#adminpage{
+    display: none;
+}
+
+
+header a{
+    color: #ffffff !important;
+}
+
+#search{
+    width: 100%;
+    margin: 0;
+}
+
+.approval_list_item{
+    height: 40px;
+    background: #fff;
+    padding: 10px 0 10px 0;
+}
+
+.approve_btn{
+    margin-top: 4px;
+}
+
+.expand_item a{
+    line-height: 40px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #00a3d3;
+    border: 1px solid #00a3d3;
+    padding: 0 4px 0 4px;
+}
+
+.approval_list_item:hover .expand_item a, .expanded_item a{
+    color: #fff;
+    font-weight: bold;
+    background: #00a3d3;
+}
+
+.expanded-view{
+    border-left: 1px solid #00a3d3;
+    /*display: none !important;*/
+    margin-bottom: 30px;
+}
+
+
+.key{
+    /*font-weight: bold;*/
+    text-align: right;
+}
+
+.value{
+    font-family: 'Inconsolata', sans-serif;
+    background: #fdf6e3;
+    /*border-bottom: 1px solid #eee8d5;*/
+}
+
+.alt{
+    background: #eee8df;
+}
+
+.value .inner{
+    padding-left: 5px;
+}
+
+.inner{
+    text-decoration: none;
+}
+
+.string{
+    color: #2aa198; /* cyan */
+    /*color: #859900;*/
+}
+
+.date{
+    /*color: #268bd2;*/
+    color: #cb4b16; /* orange */
+}
+
+.number{
+    color: #d33682;
+}
+
+
+#shadow {
+    background: #fff;
+    opacity: 0.8;
+    filter: alpha(opacity = 80);
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 99;
+}
