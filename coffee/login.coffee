@@ -131,7 +131,7 @@ load_approval_list = () ->
             $("#approval_list_status").text "Error loading rows: #{status}, #{error}, #{reason}"
             return
             
-    db.view doc_types["unapproved_flights"].view, options
+    db.view "flight/unapproved_name_including_payloads", options
     
 expanded_rows = [
     [["flight name", "string", "name"],             ["project name", "string", "metadata", "project"]],
@@ -160,11 +160,11 @@ display_approval_list = (resp) ->
             r = "
                 <div class='row approval_list_item' id='#{row.id}'>
                     <div class='one column alpha expand_item'><a id='#{row.id}-click' href='##{row.id}'>+</a></div>
-                    <div class='nine columns'>
+                    <div class='seven columns'>
                         <div><strong>#{row.doc.name}</strong></div>
                         <div><small>#{row.id}</small></div>
                     </div>
-                    <div class='four columns' style='text-align: right;'>
+                    <div class='six columns hidden-overflow' style='text-align: right;'>
                         <div>#{row.doc.launch.time}</div>
                         <div>#{row.doc.metadata?.group or ""} - #{row.doc.metadata?.project or ""}</div>
                     </div>
@@ -201,7 +201,7 @@ display_approval_list = (resp) ->
             setup_click_events row.id
     $("#approval_list_status").text "#{i} unapproved flight"
     $("#approval_list_status").append "s" if i > 1
-    $("#approval_list_status").html "<h5 style='text-align: center;'>Whoopeee! No unapproved flights! </h5>" if i = 0
+    $("#approval_list_status").html "<h5 style='text-align: center;'>Whoopeee! No unapproved flights! </h5>" if i < 0 
 
 setup_click_events = (id) ->
         $("#" + id + "-click").bind 'click', -> expand_row "#"+id
