@@ -204,7 +204,7 @@ display_approval_list = (resp) ->
     $("#approval_list_status").html "<h5 style='text-align: center;'>Whoopeee! No unapproved flights! </h5>" if i < 0 
 
 setup_click_events = (id) ->
-        $("#" + id + "-click").bind 'click', -> expand_row "#"+id
+        $("#" + id).bind 'click', -> expand_row "#"+id
         $("#" + id + " .approve_btn").click -> approve_flight id
 
 
