@@ -15,14 +15,15 @@ header a{
     margin: 0;
 }
 
-.approval_list_item{
-    height: 40px;
+.approval_list_item {
+    margin-bottom: 0;
     background: #fff;
     padding: 10px 0 10px 0;
 }
 
 .approve_btn{
     margin-top: 4px;
+    margin-bottom: 0;
 }
 
 .expand_item a{
